@@ -79,6 +79,7 @@ Below is a table of all current permissions, their integer values in hexadecimal
 | CREATE_EVENTS                          | `0x0000100000000000` `(1 << 44)` | Allows for creating scheduled events, and editing and deleting those created by the current user                                                    | V, S         |
 | USE_EXTERNAL_SOUNDS                    | `0x0000200000000000` `(1 << 45)` | Allows the usage of custom soundboard sounds from other servers                                                                                     | V            |
 | SEND_VOICE_MESSAGES                    | `0x0000400000000000` `(1 << 46)` | Allows sending voice messages                                                                                                                       | T, V, S      |
+| SET_VOICE_CHANNEL_STATUS               | `0x0001000000000000` `(1 << 48)` | Allows setting voice channel status                                                                                                                 | V            |
 
 **\* These permissions require the owner account to use [two-factor authentication](#DOCS_TOPICS_OAUTH2/twofactor-authentication-requirement) when used on a guild that has server-wide 2FA enabled.**
 

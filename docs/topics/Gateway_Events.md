@@ -472,13 +472,26 @@ Sent when a new guild channel is created, relevant to the current user. The inne
 
 #### Channel Update
 
-Sent when a channel is updated. The inner payload is a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object. This is not sent when the field `last_message_id` is altered. To keep track of the last_message_id changes, you must listen for [Message Create](#DOCS_TOPICS_GATEWAY_EVENTS/message-create) events (or [Thread Create](#DOCS_TOPICS_GATEWAY_EVENTS/thread-create) events for `GUILD_FORUM` and `GUILD_MEDIA` channels).
+Sent when a channel is updated. The inner payload is a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object. This is not sent when the `status` or `last_message_id` field changes. To keep track of the last_message_id changes, you must listen for [Message Create](#DOCS_TOPICS_GATEWAY_EVENTS/message-create) events (or [Thread Create](#DOCS_TOPICS_GATEWAY_EVENTS/thread-create) events for `GUILD_FORUM` and `GUILD_MEDIA` channels).
 
 This event may reference roles or guild members that no longer exist in the guild.
+
+> info
+> When the `status` field changes a [Voice Channel Status Update](#DOCS_TOPICS_GATEWAY_EVENTS/voice-channel-status-update) event is sent instead.
 
 #### Channel Delete
 
 Sent when a channel relevant to the current user is deleted. The inner payload is a [channel](#DOCS_RESOURCES_CHANNEL/channel-object) object.
+
+#### Voice Channel Status Update
+
+Sent when the voice channel status changes.
+
+| Field    | Type      | Description                  |
+|----------|-----------|------------------------------|
+| id       | snowflake | The channel id               |
+| guild_id | snowflake | The guild id                 |
+| status   | ?string   | The new voice channel status |
 
 #### Thread Create
 
