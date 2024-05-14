@@ -43,6 +43,7 @@ There are other rules and restrictions not shared here for the sake of spam and 
 | premium_type?      | integer   | the [type of Nitro subscription](#DOCS_RESOURCES_USER/user-object-premium-types) on a user's account | identify              |
 | public_flags?      | integer   | the public [flags](#DOCS_RESOURCES_USER/user-object-user-flags) on a user's account                  | identify              |
 | avatar_decoration? | ?string   | the user's [avatar decoration hash](#DOCS_REFERENCE/image-formatting)                                | identify              |
+| clan?              | ?UserClan | the user's [clan data](#DOCS_RESOURCES_USER/user-object-user-clan)                                   | identify              |
 
 ###### Example User
 
@@ -59,6 +60,12 @@ There are other rules and restrictions not shared here for the sake of spam and 
   "accent_color": 16711680,
   "premium_type": 1,
   "public_flags": 64
+  "clan": {
+    "identity_guild_id": "1234647491267808778",
+    "identity_enabled": true,
+    "tag": "DISC",
+    "badge": "7d1734ae5a615e82bc7a4033b98fade8"
+  },
 }
 ```
 
@@ -92,6 +99,15 @@ Premium types denote the level of premium a user has. Visit the [Nitro](https://
 | 1     | Nitro Classic |
 | 2     | Nitro         |
 | 3     | Nitro Basic   |
+
+###### User Clan
+
+| Field             | Type      | Description                                              |
+|-------------------|-----------|----------------------------------------------------------|
+| identity_guild_id | snowflake | the id of the user's primary clan                        |
+| identity_enabled  | boolean   | whether the user is displaying their clan tag            |
+| tag               | string    | the text of the user's clan tag. Limited to 4 characters |
+| badge             | string    | the [clan badge hash](#DOCS_REFERENCE/image-formatting)  |
 
 ### Connection Object
 

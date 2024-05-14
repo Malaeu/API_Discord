@@ -344,6 +344,7 @@ Discord uses ids and hashes to render images in the client. These hashes can be 
 | Role Icon                   | role-icons/[role_id](#DOCS_TOPICS_PERMISSIONS/role-object)/[role_icon](#DOCS_TOPICS_PERMISSIONS/role-object).png                                                                                                                                                  | PNG, JPEG, WebP      |
 | Guild Scheduled Event Cover | guild-events/[scheduled_event_id](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object)/[scheduled_event_cover_image](#DOCS_RESOURCES_GUILD_SCHEDULED_EVENT/guild-scheduled-event-object).png                                                       | PNG, JPEG, WebP      |
 | Guild Member Banner         | guilds/[guild_id](#DOCS_RESOURCES_GUILD/guild-object)/users/[user_id](#DOCS_RESOURCES_USER/user-object)/banners/[member_banner](#DOCS_RESOURCES_GUILD/guild-member-object).png \*                                                                                 | PNG, JPEG, WebP, GIF |
+| Clan Badge                  | clan-badges/[guild_id](#DOCS_RESOURCES_GUILD/guild-object)/[badge_hash](#DOCS_RESOURCES_USER/user-object-user-clan).png \*                                                                                                                                        | PNG, JPEG, WebP, GIF |
 
 \* In the case of endpoints that support GIFs, the hash will begin with `a_` if it is available in GIF format. (example: `a_1269e74af4df7417b13759eae50c83dc`)
 
